@@ -23,6 +23,13 @@ To run this project locally, follow these steps:
 
 ### Prerequisites
 
+Setting the GROQ API Key
+This application requires a valid GROQ_API_KEY to be set as an environment variable. Here's how you can set it:
+
+```bash
+set GROQ_API_KEY=your_api_key_here
+
+```
 Make sure you have the following installed:
 
 - Python 3.8+
