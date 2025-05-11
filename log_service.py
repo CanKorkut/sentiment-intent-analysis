@@ -6,7 +6,6 @@ from log_db import log_analysis
 log_app = FastAPI()
 
 class LogItem(BaseModel):
-    component: str
     sentence: str
     sentiment: str | None = None
     intent: str | None = None
