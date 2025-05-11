@@ -43,7 +43,7 @@ Make sure you have the following installed:
 conda create -n myenv python=3.10
 conda activate myenv
 ```
-2. Clone the repository:
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/your-username/sentiment-intent-analysis.git
