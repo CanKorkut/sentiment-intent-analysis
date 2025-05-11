@@ -71,6 +71,7 @@ uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 
 5. Start the Logging Service:
 ```bash
+cd log_service
 uvicorn log_service:log_app --host 0.0.0.0 --port 8001 --reload
 ```
 
