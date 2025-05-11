@@ -29,7 +29,7 @@ async def analyze_conversation(payload: ConversationRequest):
     await async_log({
         "component": "intent",
         "sentence": sentence,
-        "sentiment" sentiment,
+        "sentiment": sentiment,
         "intent": intent,
         "sentiment_inference_time": round(intent_time, 4),
         "intent_inference_time": round(sentiment_time, 4)
