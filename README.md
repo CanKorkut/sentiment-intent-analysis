@@ -103,4 +103,5 @@ sentiment-intent-analysis/
 └── README.md              # Project documentation
 ```
 
-
+# DB LOG Example
+![image](https://github.com/user-attachments/assets/0c200ff8-68ee-4a1d-8b15-dfdf9267a98a)
