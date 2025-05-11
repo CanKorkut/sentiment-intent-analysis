@@ -4,6 +4,16 @@ from services.sentiment import SentimentAnalyzer
 from services.intent import IntentClassifier
 import time
 import aiohttp
+import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s | %(levelname)s | %(message)s",
+    handlers=[
+        logging.FileHandler("app.log"),
+        logging.StreamHandler()
+    ]
+)
 
 app = FastAPI()
 
@@ -19,11 +29,19 @@ async def analyze_conversation(payload: ConversationRequest):
     sentence = payload.conversation
 
     start_sentiment = time.perf_counter()
-    sentiment = sentiment_analyzer.predict(sentence)
+    try:
+        sentiment = sentiment_analyzer.predict(sentence)
+    except Exception as E:
+        sentiment = None
+        logger.log(f"SentimentAnalyzer Error: {E}")
     sentiment_time = time.perf_counter() - start_sentiment
 
     start_intent = time.perf_counter()
-    intent = intent_classifier.predict(sentence)
+    try:
+        intent = intent_classifier.predict(sentence)
+    except Exception as E:
+        intent = None
+        logger.log(f"IntentClassifier Error: {E}")
     intent_time = time.perf_counter() - start_intent
 
     await async_log({
