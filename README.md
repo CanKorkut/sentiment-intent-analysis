@@ -9,7 +9,7 @@ This project includes several services:
 - **API for Sentiment & Intent Prediction**: A FastAPI-based server that accepts text input and returns sentiment and intent predictions.
 - **Streamlit UI**: A web-based user interface to upload conversation data (in JSON format) and visualize sentiment and intent analysis.
 - **Logging Service**: A FastAPI service to log the results of the sentiment and intent analysis into a MongoDB database.
-- 
+  
 ![demo](https://github.com/user-attachments/assets/02e3f74e-2658-43bd-b422-72fb9b6146fc)
 
 ## Features
