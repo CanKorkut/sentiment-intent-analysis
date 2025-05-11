@@ -1,8 +1,8 @@
-# Sentiment & Intent Analysis
+# :🧠 Sentiment & Intent Analysis
 
 This repository contains the implementation of a **Sentiment and Intent Analysis** system, designed to analyze conversations in real-time. The system uses Natural Language Processing (NLP) techniques to detect the sentiment (positive, neutral, or negative) and intent (such as inquiry, purchase intent, complaint, etc.) behind user messages.
 
-## Project Overview
+## 📌 Project Overview
 
 This project includes several services:
 
@@ -21,7 +21,7 @@ This project includes several services:
 
 To run this project locally, follow these steps:
 
-### Prerequisites
+### ⚙️ Prerequisites
 
 Setting the GROQ API Key
 This application requires a valid GROQ_API_KEY to be set as an environment variable. Here's how you can set it:
@@ -36,7 +36,7 @@ Make sure you have the following installed:
 - MongoDB (if you want to use the logging service)
 - Git (for cloning the repository)
 
-### Setup
+### 🚀 Setup
 
 1. Clone the repository:
 
@@ -73,7 +73,7 @@ Usage
 2. The application will predict the sentiment and intent of each sentence in real-time.
 3. Results will be displayed with color-coded sentiment (positive, neutral, negative) and the predicted intent.
 
-## Folder Structure
+## 📁 Folder Structure
 Here is an overview of the folder structure:
 
 ```bash
