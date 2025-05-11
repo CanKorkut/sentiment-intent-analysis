@@ -59,12 +59,13 @@ uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 
 5. Start the Logging Service:
 ```bash
-uvicorn log_server:log_app --host 0.0.0.0 --port 8001 --reload
+uvicorn log_service:log_app --host 0.0.0.0 --port 8001 --reload
 ```
 
 6. Start the Streamlit UI:
 ```bash
-streamlit run ui.py
+cd ui
+streamlit run app.py
 ```
 This will start the web interface at http://localhost:8501.
 
