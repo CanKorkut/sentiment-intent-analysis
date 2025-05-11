@@ -107,12 +107,14 @@ sentiment-intent-analysis/
 ├── main.py                # FastAPI server for sentiment and intent analysis
 ├── ui                     # Streamlit UI for uploading files and displaying results
     ├── ui.py
-├── log_server.py          # FastAPI service for logging the analysis results
-├── log_db.py              # MongoDB service to save logs
+├── log_service
+    ├── log_server.py      # FastAPI service for logging the analysis results
+    ├── log_db.py          # MongoDB service to save logs
 ├── services/              # Sentiment and intent analysis services
 │   ├── sentiment.py       # Sentiment analysis service
 │   └── intent.py          # Intent classification service
 ├── requirements.txt       # Python dependencies
+├── test.json              # test file example
 └── README.md              # Project documentation
 ```
 
