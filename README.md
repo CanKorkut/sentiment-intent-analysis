@@ -23,7 +23,7 @@ To run this project locally, follow these steps:
 
 ### ⚙️ Prerequisites
 
-Setting the GROQ API Key
+Setting the [GROQ]([https://www.google.com](https://groq.com/)) API Key
 This application requires a valid GROQ_API_KEY to be set as an environment variable. Here's how you can set it:
 
 ```bash
