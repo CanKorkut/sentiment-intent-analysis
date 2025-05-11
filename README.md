@@ -80,7 +80,7 @@ streamlit run app.py
 ```
 This will start the web interface at http://localhost:8501.
 
-Usage
+## ▶️ Usage
 1. Upload a JSON file containing a list of sentences for analysis.
 2. The application will predict the sentiment and intent of each sentence in real-time.
 3. Results will be displayed with color-coded sentiment (positive, neutral, negative) and the predicted intent.
