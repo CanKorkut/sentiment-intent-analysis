@@ -1,1 +1,86 @@
-# sentiment-intent-analysis
+# Sentiment & Intent Analysis
+
+This repository contains the implementation of a **Sentiment and Intent Analysis** system, designed to analyze conversations in real-time. The system uses Natural Language Processing (NLP) techniques to detect the sentiment (positive, neutral, or negative) and intent (such as inquiry, purchase intent, complaint, etc.) behind user messages.
+
+## Project Overview
+
+This project includes several services:
+
+- **API for Sentiment & Intent Prediction**: A FastAPI-based server that accepts text input and returns sentiment and intent predictions.
+- **Streamlit UI**: A web-based user interface to upload conversation data (in JSON format) and visualize sentiment and intent analysis.
+- **Logging Service**: A FastAPI service to log the results of the sentiment and intent analysis into a MongoDB database.
+
+## Features
+
+- **Sentiment Analysis**: Classifies messages into three categories: positive, neutral, or negative.
+- **Intent Classification**: Predicts the intent of the message (e.g., inquiry, greeting, purchase intent, etc.).
+- **Real-Time Analysis**: Supports analyzing customer and sales representative conversations in real-time.
+- **Visualization**: A user-friendly interface to upload and display analyzed results, including a summary table.
+
+## Installation
+
+To run this project locally, follow these steps:
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Python 3.8+
+- MongoDB (if you want to use the logging service)
+- Git (for cloning the repository)
+
+### Setup
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/sentiment-intent-analysis.git
+cd sentiment-intent-analysis
+```
+2. Install required dependencies:
+
+pip install -r requirements.txt
+
+
+3. Set up MongoDB if you plan to use the logging service (or configure another logging service).
+
+4. Start the Sentiment & Intent API:
+
+```bash
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+```
+
+5. Start the Logging Service:
+```bash
+uvicorn log_server:log_app --host 0.0.0.0 --port 8001 --reload
+```
+
+6. Start the Streamlit UI:
+```bash
+streamlit run ui.py
+```
+This will start the web interface at http://localhost:8501.
+
+Usage
+1. Upload a JSON file containing a list of sentences for analysis.
+2. The application will predict the sentiment and intent of each sentence in real-time.
+3. Results will be displayed with color-coded sentiment (positive, neutral, negative) and the predicted intent.
+
+## Folder Structure
+Here is an overview of the folder structure:
+
+sentiment-intent-analysis/
+│
+├── main.py                # FastAPI server for sentiment and intent analysis
+├── ui                     # Streamlit UI for uploading files and displaying results
+    ├── ui.py
+├── log_server.py          # FastAPI service for logging the analysis results
+├── log_db.py              # MongoDB service to save logs
+├── services/              # Sentiment and intent analysis services
+│   ├── sentiment.py       # Sentiment analysis service
+│   └── intent.py          # Intent classification service
+├── requirements.txt       # Python dependencies
+└── README.md              # Project documentation
+
+
+
