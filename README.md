@@ -85,6 +85,17 @@ Usage
 2. The application will predict the sentiment and intent of each sentence in real-time.
 3. Results will be displayed with color-coded sentiment (positive, neutral, negative) and the predicted intent.
 
+JSON file must be in this structure:
+
+```bash
+{
+  "sentences": [
+    "SENTENCE1",
+    "SENTENCE2"
+  ]
+}
+```
+
 ## 📁 Folder Structure
 Here is an overview of the folder structure:
 
