@@ -1,4 +1,4 @@
-# :🧠 Sentiment & Intent Analysis
+# 🧠 Sentiment & Intent Analysis
 
 This repository contains the implementation of a **Sentiment and Intent Analysis** system, designed to analyze conversations in real-time. The system uses Natural Language Processing (NLP) techniques to detect the sentiment (positive, neutral, or negative) and intent (such as inquiry, purchase intent, complaint, etc.) behind user messages.
 
