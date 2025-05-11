@@ -4,6 +4,11 @@ import json
 
 class IntentClassifier:
     def __init__(self):
+        if not settings.GROQ_API_KEY:
+            raise ValueError(
+                "GROQ_API_KEY is not set. Please set your API key in the environment variables or config file.\n"
+                "You can create a key at: https://console.groq.com/keys"
+            )
         self.client = Groq(api_key=settings.GROQ_API_KEY)
         self.model = settings.GROQ_MODEL_NAME
         self.system_prompt = """
