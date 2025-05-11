@@ -38,9 +38,9 @@ git clone https://github.com/your-username/sentiment-intent-analysis.git
 cd sentiment-intent-analysis
 ```
 2. Install required dependencies:
-
+```bash
 pip install -r requirements.txt
-
+```
 
 3. Set up MongoDB if you plan to use the logging service (or configure another logging service).
 
@@ -69,6 +69,7 @@ Usage
 ## Folder Structure
 Here is an overview of the folder structure:
 
+```bash
 sentiment-intent-analysis/
 │
 ├── main.py                # FastAPI server for sentiment and intent analysis
@@ -81,6 +82,6 @@ sentiment-intent-analysis/
 │   └── intent.py          # Intent classification service
 ├── requirements.txt       # Python dependencies
 └── README.md              # Project documentation
-
+```
 
 
