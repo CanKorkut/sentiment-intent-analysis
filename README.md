@@ -32,13 +32,18 @@ set GROQ_API_KEY=your_api_key_here
 ```
 Make sure you have the following installed:
 
-- Python 3.8+
-- MongoDB (if you want to use the logging service)
-- Git (for cloning the repository)
+- Python 3.9+
+- MongoDB
+- Anaconda
 
 ### 🚀 Setup
-
-1. Clone the repository:
+0. Create Conda Env:
+   
+```bash
+conda create -n myenv python=3.10
+conda activate myenv
+```
+2. Clone the repository:
 
 ```bash
 git clone https://github.com/your-username/sentiment-intent-analysis.git
@@ -49,9 +54,14 @@ cd sentiment-intent-analysis
 pip install -r requirements.txt
 ```
 
-3. Set up MongoDB if you plan to use the logging service (or configure another logging service).
+3. Set up MongoDB:
 
-4. Start the Sentiment & Intent API:
+```bash
+docker pull mongo
+docker run --name mongo-container -d -p 27017:27017 mongo
+```
+
+5. Start the Sentiment & Intent API:
 
 ```bash
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
