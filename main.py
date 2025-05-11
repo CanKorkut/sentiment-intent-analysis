@@ -15,6 +15,7 @@ logging.basicConfig(
     ]
 )
 
+logger = logging.getLogger("my_app")
 app = FastAPI()
 
 sentiment_analyzer = SentimentAnalyzer()
@@ -32,20 +33,19 @@ async def analyze_conversation(payload: ConversationRequest):
     try:
         sentiment = sentiment_analyzer.predict(sentence)
     except Exception as E:
-        sentiment = None
-        logger.log(f"SentimentAnalyzer Error: {E}")
+        sentiment = ""
+        logger.error(f"SentimentAnalyzer Error: {E}")
     sentiment_time = time.perf_counter() - start_sentiment
 
     start_intent = time.perf_counter()
     try:
         intent = intent_classifier.predict(sentence)
     except Exception as E:
-        intent = None
-        logger.log(f"IntentClassifier Error: {E}")
+        intent = ""
+        logger.error(f"IntentClassifier Error: {E}")
     intent_time = time.perf_counter() - start_intent
 
     await async_log({
-        "component": "intent",
         "sentence": sentence,
         "sentiment": sentiment,
         "intent": intent,
